@@ -12,10 +12,10 @@ import (
 	"github.com/machinebox/graphql"
 
 	handler "github.com/lavrahq/cli-function-go-sdk"
-	"github.com/lavrahq/cli-function-go/template/golang-http/function"
+	"github.com/lavrahq/cli-function-go/template/go-handler/function"
 )
 
-// GetSecet retrieves a secret from OpenFaaS
+// GetSecret retrieves a secret from OpenFaaS
 func GetSecret(secretName string) (secretBytes []byte, err error) {
 	// read from the openfaas secrets folder
 	secretBytes, err = ioutil.ReadFile("/var/openfaas/secrets/" + secretName)
