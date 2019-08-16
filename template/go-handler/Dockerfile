@@ -12,7 +12,7 @@ RUN apk add git \
   curl
 
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh \
-  dep ensure
+  && dep ensure
 
 # Run a gofmt and exclude all vendored code.
 RUN test -z "$(gofmt -l $(find . -type f -name '*.go' -not -path "./vendor/*" -not -path "./function/vendor/*"))" || { echo "Run \"gofmt -s -w\" on your Golang code"; exit 1; }
