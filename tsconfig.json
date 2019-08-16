@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "target": "ES2017",
+    "esModuleInterop": true,
+    "lib": ["esnext"],
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "typeRoots": [
+      "./@types",
+      "./node_modules/@types"
+    ]
+  }
+}
